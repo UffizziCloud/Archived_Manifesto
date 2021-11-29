@@ -1,3 +1,0 @@
-Definition
-
-Continuous Preview(s) are an automation-enabled method by which in-progress development branches - known as topic branches - are continuously deployed in a dynamic production-like environment and are available for collaborative review and testing at a secure URL.  By this method iterative feedback is accelerated and testing is conducted in a logical sequence where topic branch functionality testing is completed prior to integration testing and delivery (CP, then CI / CD).

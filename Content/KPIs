@@ -1,9 +1,0 @@
-Software Delivery KPIs supported by CP
-
-A. Lead Time - the time between when a task is created and the solution is delivered
-
-B. Cycle Time - how quickly an issue can be reviewed, feedback provided, and adjustments made.
-
-C. Team Velocity - the number of tasks completed over a given period of time
-
-D. Code Stability - how often topic branch integrations create unintended breakage.
