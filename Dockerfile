@@ -13,18 +13,12 @@ RUN mkdir -p /app
 WORKDIR /app
 
 COPY package.json yarn.lock ./
+RUN yarn install
 
 ADD . /app
 
-# RUN yarn set version berry
-RUN yarn install
-
-ARG REACT_APP_ENV
-
 RUN yarn build
 
-EXPOSE 4000
+EXPOSE 3000
 
-ENV PORT=4000
-
-CMD yarn run serve -s /app/build -l 4000
+CMD yarn run serve -s /app/build
