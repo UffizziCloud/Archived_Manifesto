@@ -2,7 +2,13 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
   section: {
-    minHeight: '100vh',
+    marginBottom: 100,
+    '& img': {
+      width: '100%',
+    },
+    '& th': {
+      background: '#5656DB08',
+    },
   },
 }));
 

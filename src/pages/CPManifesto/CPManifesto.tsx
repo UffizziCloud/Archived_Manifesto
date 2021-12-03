@@ -1,5 +1,7 @@
-import { Typography } from '@material-ui/core';
+import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@material-ui/core';
 import { FC, useEffect } from 'react';
+
+import cpImage from 'assets/cpInfographic.svg';
 
 import { useLayoutContext } from 'hooks/useLayoutContext';
 
@@ -103,7 +105,46 @@ const CPManifesto: FC = () => {
 
       <section className={classes.section} id="qa-vs-cp">
         <PageTitle>Traditional QA vs. Continuous Previews</PageTitle>
-        <Typography>?</Typography>
+        <TableContainer component={Paper}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell align="center">
+                  <b>Traditional QA</b>
+                </TableCell>
+                <TableCell align="center">
+                  <b>Continuous Previews</b>
+                </TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow>
+                <TableCell>Testing begins post-integration</TableCell>
+                <TableCell>Testing begins pre-integration</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Delayed feedback loop</TableCell>
+                <TableCell>Continuous feedback loop</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Feature and integration testing are batched/coupled</TableCell>
+                <TableCell>Feature and integration testing are isolated/decoupled</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Persistent QA/Test environment = single point of failure</TableCell>
+                <TableCell>On-demand test environments (as many as needed)</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Higher risk of “bricking QA”</TableCell>
+                <TableCell>Lower risk of “bricking QA”</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>More context switching</TableCell>
+                <TableCell>Limited context switching</TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </TableContainer>
       </section>
 
       <section className={classes.section} id="definition">
@@ -119,7 +160,7 @@ const CPManifesto: FC = () => {
 
       <section className={classes.section} id="practice">
         <PageTitle>CP In Practice</PageTitle>
-        <Typography>?</Typography>
+        <img src={cpImage} alt="CP Infographic" />
       </section>
 
       <section className={classes.section} id="software-delivery">
