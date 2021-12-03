@@ -15,10 +15,12 @@ const useStyles = makeStyles(() => ({
     fontSize: 18,
     fontWeight: 'bold',
     margin: 0,
+    width: 'max-content',
   },
   subtitle: {
     fontSize: 12,
     margin: 0,
+    width: 'max-content',
   },
 }));
 

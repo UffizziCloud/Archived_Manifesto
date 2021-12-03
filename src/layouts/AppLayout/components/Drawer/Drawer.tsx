@@ -24,19 +24,21 @@ const Drawer: FC<DrawerProps> = (props) => {
       }}
     >
       <div className={classes.drawerContainer}>
-        <Scrollspy
-          style={{ margin: 0, padding: 0 }}
-          items={menuItems.map(({ path }) => path)}
-          currentClassName={classes.active}
-        >
-          {menuItems.map(({ name, path }) => (
-            <ListItem key={nanoid()} className={classes.menuItem}>
-              <Link href={`#${path}`} className={classes.menuLink}>
-                {name}
-              </Link>
-            </ListItem>
-          ))}
-        </Scrollspy>
+        {menuItems.length && (
+          <Scrollspy
+            style={{ margin: 0, padding: 0 }}
+            items={menuItems.map(({ path }) => path)}
+            currentClassName={classes.active}
+          >
+            {menuItems.map(({ name, path }) => (
+              <ListItem key={nanoid()} className={classes.menuItem}>
+                <Link href={`#${path}`} className={classes.menuLink}>
+                  {name}
+                </Link>
+              </ListItem>
+            ))}
+          </Scrollspy>
+        )}
       </div>
       <Divider />
     </MuiDrawer>

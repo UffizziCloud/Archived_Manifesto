@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
   link: {
+    width: 'max-content',
     color: '#ffffff',
     padding: '6px 0',
     margin: '0 30px',
