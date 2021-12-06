@@ -1,7 +1,7 @@
 import { AppBar, Toolbar, Link } from '@material-ui/core';
 import clsx from 'clsx';
 import { FC } from 'react';
-import { useRouteMatch, Link as RouterLink } from 'react-router-dom';
+import { useRouteMatch } from 'react-router-dom';
 
 import { appRoutes } from 'routes/appRoutes';
 import externalLinks from 'routes/externalLinks';
@@ -25,15 +25,19 @@ const Header: FC = () => {
         <div className={classes.links}>
           {appRoutes.map(({ path, name }) => (
             <Link
-              component={RouterLink}
               key={path}
               className={clsx(classes.link, isMatchPath({ path, exact: true }) && classes.linkActive)}
-              to={path}
+              href={path}
             >
               {name}
             </Link>
           ))}
-          <Link className={clsx(classes.link, classes.linkButton)} href={externalLinks.uffizziGitHub}>
+          <Link
+            className={clsx(classes.link, classes.linkButton)}
+            href={externalLinks.uffizziGitHub}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={githubLogo} alt="github logo" className={classes.btnLogo} />
             Contribute
           </Link>

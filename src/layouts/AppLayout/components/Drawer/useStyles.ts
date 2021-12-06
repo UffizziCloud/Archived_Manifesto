@@ -16,7 +16,7 @@ const useStyles = makeStyles(() => ({
   },
   drawerContainer: {
     overflow: 'auto',
-    padding: '130px 0 0 100px',
+    padding: '110px 0 0 100px',
   },
   active: {
     fontWeight: 'bold',
@@ -26,6 +26,7 @@ const useStyles = makeStyles(() => ({
     fontSize: 18,
   },
   menuLink: {
+    fontSize: 16,
     color: '#000000',
     textDecoration: 'none',
     '&:hover': {
