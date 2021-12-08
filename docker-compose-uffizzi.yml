@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: https://github.com/jpthurman/example-voting-vote:main
+      dockerfile: Dockerfile
+    command: sh -c "yarn && yarn start"
+
+volumes:
+  frontend:
+
+ingress:
+  service: frontend
+  port: 3000
