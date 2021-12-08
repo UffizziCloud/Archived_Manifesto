@@ -34,7 +34,7 @@ const CPManifesto: FC = () => {
           Over the past two decades since the Agile Manifesto was published, the concepts and technologies that support
           Continuous Integration, Continuous Delivery, Cloud Native development, Containerization, Microservices, and
           Container Orchestration have greatly improved the Agility with which software can be built, tested, and
-          delivered These concepts and technologies have ushered in the now ubiquitous concept of DevOps and have helped
+          delivered. These concepts and technologies have ushered in the now ubiquitous concept of DevOps and have helped
           break down the silos within the multi-disciplinary teams that must continuously collaborate to build great
           software.
           <br />
@@ -45,11 +45,7 @@ const CPManifesto: FC = () => {
           <br />
           Over the past 2+ years we have listened to the challenges of team software development through interviews with
           over 150 Developers, DevOps, and Cross-functional team members across a variety of industries and at various
-          levels of business maturity.
-          <br />
-          <br />
-          These are our observations:
-          <br />
+          levels of business maturity - these are our observations:
           <br />
           -The benefits of Previewing are primarily confined to software teams that have the time, resources, and
           expertise to build and maintain their own internal preview capability - often referred to as an internal
@@ -61,32 +57,32 @@ const CPManifesto: FC = () => {
           -Virtually all teams from can benefit from a Full-Stack Preview capability and industry defined best practices
           for Previewing i.e. Continuous Previews.
           <br />
-          -For most teams a Preview Tool is on their wish list but there&apos;s no clear choices or guidelines provided
-          by either the Open Source Community, the CNCF, or the industry as a whole.
+          -For most teams a Preview Tool is on their wish list but there are no clear choices or guidelines provided
+          by either the Open Source Community, the Cloud Native Computing Foundation, or the industry as a whole.
           <br />
           -As a community we are not actively collaborating or innovating towards a well-defined Preview process and
           technical capability.
           <br />
           -The market is awash in open source and commercially available Continuous Integration, Continuous Delivery,
-          and Deployment tools, but these tools, while useful, are fundamentally lacking for the task of Previewing and
+          and Deployment tools, but these tools, while incredibly useful in their domains, are fundamentally lacking for the task of Previewing and
           facilitating the requisite collaborative teamwork across cross-functional teams to produce quality working
-          software
+          software.
         </Typography>
       </Section>
 
       <Section path="principles" title="The 11 Principles of CP">
         <ol className={classes.list}>
-          <li>Significantly Easier to Fix issues Pre-merge vice Post-merge</li>
+          <li>Significantly easier to fix issues Pre-merge vice Post-merge</li>
           <li>Bring QA into the Develpment Process (CP = Continuous Collaboration between Devolopment and Product)</li>
           <li>Confirm Functionality Prior to Integration</li>
-          <li>Isolated Feature Testing (Separation of Concerns) over batch testing</li>
-          <li>Tight integration between Ticketing, Repositories, Infrastructure</li>
+          <li>Isolated feature testing (Separation of Concerns) over batch testing</li>
+          <li>Tight integration between Ticketing, Repositories, and Infrastructure</li>
           <li>No additional burdens on the Development Team</li>
           <li>Limit Context Switching</li>
           <li>Reliance on Automation</li>
-          <li>Reduce reliance on Critical Sinale Points of Failure (i.e. persistent QA environment)</li>
-          <li>Empower Developers with Feature-level Test Environments</li>
-          <li>Support for Full-stack (Front ends, Back Ends, Microservices, APls, backing services . . .)</li>
+          <li>Reduce reliance on critical single points of failure (i.e. persistent QA environment)</li>
+          <li>Empower Developers with feature-level test environments</li>
+          <li>Support for the Full-stack (Front ends, Back Ends, Microservices, APls, backing services . . .)</li>
         </ol>
       </Section>
 
@@ -136,10 +132,10 @@ const CPManifesto: FC = () => {
       <Section path="definition" title="Definition">
         <Typography>
           Continuous Preview(s) are an automation-enabled method by which in-progress development branches -known as
-          topic branches -are continuously deployed in a dynamic production-like environment and are available for
+          topic branches - are continuously deployed in a dynamic cloud environment and are available for
           collaborative review and testing at a secure URL. By this method iterative feedback is accelerated and testing
-          is conducted in a logical sequence where topic branch functionality testing is completed prior to integration
-          testing and delivery (CP, then Cl / CD).
+          is conducted in a logical sequence, where topic branch functionality testing is completed prior to integration
+          testing and delivery (First you CP, then you CI / CD).
         </Typography>
       </Section>
 
@@ -149,10 +145,10 @@ const CPManifesto: FC = () => {
 
       <Section path="software-delivery" title="Software Delivery Pls improved by CP">
         <Typography>
-          <b>Leac/flime</b> - the time between when a task is created and the solution is delvered
+          <b>Lead Time</b> - the time between when a task is created and the solution is delvered
           <br />
           <br />
-          <b>Cycle Time</b> - how quickly an issue can be reviewed, feedback provided, and adjustments made.
+          <b>Cycle Time</b> - how quickly an issue can be reviewed, feedback provided, and adjustments made
           <br />
           <br />
           <b>Team Velocity</b> - the number of tasks completed over a given period of time
@@ -166,7 +162,7 @@ const CPManifesto: FC = () => {
         <Typography>
           The initial contributors to the CP Manifesto come from diverse backgrounds including being directly or
           indirectly involved in the design, development, deployment, and scaling of applications from Startups to the
-          Fortune 500; leading Machine Learning Research Teams; and leading high performance Navy SEAL teams into
+          Fortune 500; leading Machine Learning Research Teams; and leading Navy SEAL teams into
           combat.
           <br />
           <br />
@@ -181,10 +177,13 @@ const CPManifesto: FC = () => {
 
       <Section path="who-should-read" title="Who should read this?">
         <Typography>
-          The initial contributors to the CP Manifesto come from diverse backgrounds including being directly or
-          indirectly involved in the design, development, deployment, and scaling of applications from Startups to the
-          Fortune 500; leading Machine I earning Research Teams: and leading high nerformance Naw SEAl teams into
-          comhat.
+          <b>Any Software Developer building applications withing the context of a team.
+          <br />
+          <b>Ops and DevOps engineers who deploy and manage such applications.
+          <br />
+          <b>Product leaders, designers, and team members who contribute to a software product.  
+          <br />
+          <b>Key leaders and decision makers within your organization.
         </Typography>
       </Section>
     </>
