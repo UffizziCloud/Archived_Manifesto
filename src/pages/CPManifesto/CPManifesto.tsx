@@ -165,10 +165,8 @@ const CPManifesto: FC = () => {
           Fortune 500; leading Machine Learning Research Teams; and leading Navy SEAL teams into
           combat.
           <br />
-          <br />
           We seek to pioneer and promote better ways of developing software by leveraging technology and automation to
           push the bounds of Agile Software Development.
-          <br />
           <br />
           We are advocating for organizations to adopt Continuous Previews as an Agile-supporting method to improve and
           expedite how they build and test software.
@@ -177,13 +175,13 @@ const CPManifesto: FC = () => {
 
       <Section path="who-should-read" title="Who should read this?">
         <Typography>
-          <b>Any Software Developer building applications withing the context of a team.
+          Any Software Developer building applications withing the context of a team.
           <br />
-          <b>Ops and DevOps engineers who deploy and manage such applications.
+          Ops and DevOps engineers who deploy and manage such applications.
           <br />
-          <b>Product leaders, designers, and team members who contribute to a software product.  
+          Product leaders, designers, and team members who contribute to a software product.  
           <br />
-          <b>Key leaders and decision makers within your organization.
+          Key leaders and decision makers within your organization.
         </Typography>
       </Section>
     </>
