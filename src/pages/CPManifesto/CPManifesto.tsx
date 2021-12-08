@@ -20,9 +20,9 @@ const CPManifesto: FC = () => {
       { name: 'Traditional QA vs. Continuous Previews', path: 'qa-vs-cp' },
       { name: 'Definition', path: 'definition' },
       { name: 'CP In Practice', path: 'practice' },
-      { name: 'Software Delivery Pls improved by CP', path: 'software-delivery' },
+      { name: 'Software Delivery KPIs improved by CP', path: 'software-delivery' },
       { name: 'Background', path: 'background' },
-      { name: 'Who should read this', path: 'who-should-read' },
+      { name: 'Who should read this?', path: 'who-should-read' },
     ]);
     return resetPageMenuItems;
   }, []);
