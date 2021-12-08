@@ -1,5 +1,7 @@
 import { makeStyles } from '@material-ui/core';
 
+import { layoutTopOffset } from 'helpers/layoutTopOffset';
+
 const drawerWidth = 300;
 
 const useStyles = makeStyles(() => ({
@@ -16,16 +18,17 @@ const useStyles = makeStyles(() => ({
   },
   drawerContainer: {
     overflow: 'auto',
-    padding: '110px 0 0 100px',
+    padding: `${layoutTopOffset}px 0 0 100px`,
   },
   active: {
     fontWeight: 'bold',
   },
   menuItem: {
-    padding: '14px 0',
+    padding: 0,
     fontSize: 18,
   },
   menuLink: {
+    padding: '14px 0',
     fontSize: 16,
     color: '#000000',
     textDecoration: 'none',

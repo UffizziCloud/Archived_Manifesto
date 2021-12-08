@@ -1,14 +1,19 @@
 import { makeStyles } from '@material-ui/core';
 
+import { layoutTopOffset } from 'helpers/layoutTopOffset';
+
+const lastSectionBottomMargin = 100;
+
 const useStyles = makeStyles(() => ({
   section: {
+    paddingTop: layoutTopOffset,
     '&:last-child': {
-      marginBottom: 100,
-      minHeight: 'calc(100vh - 100px)',
+      marginBottom: lastSectionBottomMargin,
+      minHeight: `calc(100vh - ${lastSectionBottomMargin}px - ${layoutTopOffset}px)`,
     },
   },
   title: {
-    padding: '110px 0 30px 0',
+    paddingBottom: 20,
   },
 }));
 

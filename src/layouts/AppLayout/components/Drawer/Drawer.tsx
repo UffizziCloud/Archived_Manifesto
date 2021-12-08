@@ -5,6 +5,8 @@ import Scrollspy from 'react-scrollspy';
 
 import { PageSideMenuItem } from 'types/resources/PageSideMenu';
 
+import { layoutTopOffset } from 'helpers/layoutTopOffset';
+
 import useStyles from './useStyles';
 
 type DrawerProps = {
@@ -29,6 +31,7 @@ const Drawer: FC<DrawerProps> = (props) => {
             style={{ margin: 0, padding: 0 }}
             items={menuItems.map(({ path }) => path)}
             currentClassName={classes.active}
+            offset={-layoutTopOffset}
           >
             {menuItems.map(({ name, path }) => (
               <ListItem key={nanoid()} className={classes.menuItem}>
