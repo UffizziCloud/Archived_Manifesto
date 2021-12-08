@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     command: sh -c "yarn && yarn start"
     
-continuous preview:
+continuous_preview:
   deploy_preview_when_pull_request_is_opened: true
   delete_prevew_when_pull_request_is_closed: true
   share_to_github: true
