@@ -10,6 +10,12 @@ services:
 volumes:
   frontend:
 
+continuous previews:
+  deploy_preview_when_pull_request_is_opened: true
+  delete_prevew_when_pull_request_is_closed: true
+  share_to_github: true
+  delete_preview_after: 4hr
+  
 ingress:
   service: frontend
   port: 3000
