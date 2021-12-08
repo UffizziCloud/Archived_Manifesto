@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  frontend:
+    build: .
+    volumes:
+      - .:/app:cached
+      - frontend:/app/build
+      - ~/.bash_history:/root/.bash_history
+    ports:
+      - 3000:3000
+    command: sh -c "yarn && yarn start"
+
+volumes:
+  frontend:

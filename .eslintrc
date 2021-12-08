@@ -1,0 +1,199 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["import", "@typescript-eslint", "prettier", "spellcheck"],
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/react",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      2,
+      {
+        "singleQuote": true,
+        "trailingComma": "all",
+        "printWidth": 120
+      }
+    ],
+    "indent": ["error", 2],
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react/require-default-props": "off",
+    "import/no-absolute-path": ["off"],
+    "import/extensions": ["off"],
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc"
+        },
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+        "pathGroups": [
+          {
+            "pattern": "config/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "providers/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "hooks/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "repositories/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "presenters/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "resources/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "types/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "enums/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "layouts/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "routes/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "helpers/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "utils/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "content/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "components/**",
+            "group": "internal",
+            "position": "after"
+          }
+        ]
+      }
+    ],
+    "import/prefer-default-export": ["off"],
+    "spellcheck/spell-checker": [
+      1,
+      {
+        "strings": false,
+        "templates": false,
+        "skipWords": [
+          "axios",
+          "formik",
+          "swr",
+          "mui",
+          "breakpoint",
+          "webkit",
+          "moz",
+          "osx",
+          "qs",
+          "jss",
+          "td",
+          "th",
+          "pathname",
+          "Moz",
+          "revalidate",
+          "camelize",
+          "decamelize",
+          "req",
+          "webpack",
+          "rollbar",
+          "javascript",
+          "clsx",
+          "mailto",
+          "checkbox",
+          "href",
+          "dhc",
+          "nullable",
+          "li",
+          "multiline",
+          "ssr",
+          "usa",
+          "camelized",
+          "Uffizzi",
+          "Linkedin",
+          "Youtube",
+          "dsn",
+          "integrations",
+          "faq",
+          "xl",
+          "Svg",
+          "msg",
+          "Tooltip",
+          "sso",
+          "cvc",
+          "acc",
+          "nanoid",
+          "Scrollspy"
+        ],
+        "skipIfMatch": ["grey[^s]*"]
+      }
+    ]
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      },
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.tsx"],
+      "rules": {
+        "react/prop-types": "off"
+      }
+    }
+  ]
+}
