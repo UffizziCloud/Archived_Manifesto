@@ -4,6 +4,7 @@ import { FC } from 'react';
 import { useRouteMatch } from 'react-router-dom';
 
 import { appRoutes } from 'routes/appRoutes';
+import externalLinks from 'routes/externalLinks';
 
 import githubLogo from 'assets/githubLogo.svg';
 
@@ -31,7 +32,12 @@ const Header: FC = () => {
               {name}
             </Link>
           ))}
-          <Link className={clsx(classes.link, classes.linkButton)} href="https://google.com">
+          <Link
+            className={clsx(classes.link, classes.linkButton)}
+            href={externalLinks.uffizziGitHub}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={githubLogo} alt="github logo" className={classes.btnLogo} />
             Contribute
           </Link>

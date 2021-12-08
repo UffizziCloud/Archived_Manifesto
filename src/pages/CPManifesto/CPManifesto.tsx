@@ -1,9 +1,11 @@
-import { Typography } from '@material-ui/core';
+import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@material-ui/core';
 import { FC, useEffect } from 'react';
+
+import cpImage from 'assets/cpInfographic.svg';
 
 import { useLayoutContext } from 'hooks/useLayoutContext';
 
-import PageTitle from 'components/PageTitle';
+import Section from 'components/Section';
 
 import useStyles from './useStyles';
 
@@ -27,8 +29,7 @@ const CPManifesto: FC = () => {
 
   return (
     <>
-      <section className={classes.section} id="overview">
-        <PageTitle>Overview</PageTitle>
+      <Section path="overview" title="Overview">
         <Typography>
           Over the past two decades since the Agile Manifesto was published, the concepts and technologies that support
           Continuous Integration, Continuous Delivery, Cloud Native development, Containerization, Microservices, and
@@ -71,43 +72,68 @@ const CPManifesto: FC = () => {
           facilitating the requisite collaborative teamwork across cross-functional teams to produce quality working
           software
         </Typography>
-      </section>
+      </Section>
 
-      <section className={classes.section} id="principles">
-        <PageTitle>The 11 Principles of CP</PageTitle>
-        <Typography>
-          1. Significantly Easier to Fix issues Pre-merge vice Post-merge
-          <br />
-          2. Bring QA into the Develpment Process (CP = Continuous Collaboration between Devolopment and Product)
-          <br />
-          3. Confirm Functionality Prior to Integration
-          <br />
-          4. Isolated Feature Testing (Separation of Concerns) over batch testing
-          <br />
-          5. Tight integration between Ticketing, Repositories, Infrastructure
-          <br />
-          6. No additional burdens on the Development Team
-          <br />
-          7. Limit Context Switching
-          <br />
-          8. Reliance on Automation
-          <br />
-          9. Reduce reliance on Critical Sinale Points of Failure (i.e. persistent QA environment)
-          <br />
-          10. Empower Developers with Feature-level Test Environments
-          <br />
-          11. Support for Full-stack (Front ends, Back Ends, Microservices, APls, backing services . . .)
-          <br />
-        </Typography>
-      </section>
+      <Section path="principles" title="The 11 Principles of CP">
+        <ol className={classes.list}>
+          <li>Significantly Easier to Fix issues Pre-merge vice Post-merge</li>
+          <li>Bring QA into the Develpment Process (CP = Continuous Collaboration between Devolopment and Product)</li>
+          <li>Confirm Functionality Prior to Integration</li>
+          <li>Isolated Feature Testing (Separation of Concerns) over batch testing</li>
+          <li>Tight integration between Ticketing, Repositories, Infrastructure</li>
+          <li>No additional burdens on the Development Team</li>
+          <li>Limit Context Switching</li>
+          <li>Reliance on Automation</li>
+          <li>Reduce reliance on Critical Sinale Points of Failure (i.e. persistent QA environment)</li>
+          <li>Empower Developers with Feature-level Test Environments</li>
+          <li>Support for Full-stack (Front ends, Back Ends, Microservices, APls, backing services . . .)</li>
+        </ol>
+      </Section>
 
-      <section className={classes.section} id="qa-vs-cp">
-        <PageTitle>Traditional QA vs. Continuous Previews</PageTitle>
-        <Typography>?</Typography>
-      </section>
+      <Section path="qa-vs-cp" title="Traditional QA vs. Continuous Previews">
+        <TableContainer component={Paper}>
+          <Table>
+            <TableHead className={classes.tableHead}>
+              <TableRow>
+                <TableCell align="center">
+                  <b>Traditional QA</b>
+                </TableCell>
+                <TableCell align="center">
+                  <b>Continuous Previews</b>
+                </TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow>
+                <TableCell>Testing begins post-integration</TableCell>
+                <TableCell>Testing begins pre-integration</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Delayed feedback loop</TableCell>
+                <TableCell>Continuous feedback loop</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Feature and integration testing are batched/coupled</TableCell>
+                <TableCell>Feature and integration testing are isolated/decoupled</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Persistent QA/Test environment = single point of failure</TableCell>
+                <TableCell>On-demand test environments (as many as needed)</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Higher risk of “bricking QA”</TableCell>
+                <TableCell>Lower risk of “bricking QA”</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>More context switching</TableCell>
+                <TableCell>Limited context switching</TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Section>
 
-      <section className={classes.section} id="definition">
-        <PageTitle>Definition</PageTitle>
+      <Section path="definition" title="Definition">
         <Typography>
           Continuous Preview(s) are an automation-enabled method by which in-progress development branches -known as
           topic branches -are continuously deployed in a dynamic production-like environment and are available for
@@ -115,15 +141,13 @@ const CPManifesto: FC = () => {
           is conducted in a logical sequence where topic branch functionality testing is completed prior to integration
           testing and delivery (CP, then Cl / CD).
         </Typography>
-      </section>
+      </Section>
 
-      <section className={classes.section} id="practice">
-        <PageTitle>CP In Practice</PageTitle>
-        <Typography>?</Typography>
-      </section>
+      <Section path="practice" title="CP In Practice">
+        <img className={classes.image} src={cpImage} alt="CP Infographic" />
+      </Section>
 
-      <section className={classes.section} id="software-delivery">
-        <PageTitle>Software Delivery Pls improved by CP</PageTitle>
+      <Section path="software-delivery" title="Software Delivery Pls improved by CP">
         <Typography>
           <b>Leac/flime</b> - the time between when a task is created and the solution is delvered
           <br />
@@ -136,10 +160,9 @@ const CPManifesto: FC = () => {
           <br />
           <b>Code Stability</b> - how often topic branch integrations create unintended breakage
         </Typography>
-      </section>
+      </Section>
 
-      <section className={classes.section} id="background">
-        <PageTitle>Background</PageTitle>
+      <Section path="background" title="Background">
         <Typography>
           The initial contributors to the CP Manifesto come from diverse backgrounds including being directly or
           indirectly involved in the design, development, deployment, and scaling of applications from Startups to the
@@ -154,17 +177,16 @@ const CPManifesto: FC = () => {
           We are advocating for organizations to adopt Continuous Previews as an Agile-supporting method to improve and
           expedite how they build and test software.
         </Typography>
-      </section>
+      </Section>
 
-      <section className={classes.section} id="who-should-read">
-        <PageTitle>Who should read this?</PageTitle>
+      <Section path="who-should-read" title="Who should read this?">
         <Typography>
           The initial contributors to the CP Manifesto come from diverse backgrounds including being directly or
           indirectly involved in the design, development, deployment, and scaling of applications from Startups to the
           Fortune 500; leading Machine I earning Research Teams: and leading high nerformance Naw SEAl teams into
           comhat.
         </Typography>
-      </section>
+      </Section>
     </>
   );
 };

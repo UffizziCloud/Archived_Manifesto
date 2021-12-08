@@ -8,9 +8,7 @@ services:
       - frontend:/app/build
       - ~/.bash_history:/root/.bash_history
     ports:
-      - 4000:4000
-    environment:
-      - NODE_ENV=development
+      - 3000:3000
     command: sh -c "yarn && yarn start"
 
 volumes:

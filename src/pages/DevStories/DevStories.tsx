@@ -1,9 +1,11 @@
-import { Typography } from '@material-ui/core';
+import { Link, Typography } from '@material-ui/core';
 import { FC, useEffect } from 'react';
+
+import externalLinks from 'routes/externalLinks';
 
 import { useLayoutContext } from 'hooks/useLayoutContext';
 
-import PageTitle from 'components/PageTitle';
+import Section from 'components/Section';
 
 import useStyles from './useStyles';
 
@@ -13,41 +15,34 @@ const DevStories: FC = () => {
 
   useEffect(() => {
     setPageMenuItems([
-      { name: 'Story 1', path: 'story1' },
-      { name: 'Story 2', path: 'story2' },
-      { name: 'Story 3', path: 'story3' },
+      { name: 'Developer Stories', path: 'header' },
+      { name: 'Submit your story', path: 'how-to-add' },
+      // { name: 'TITLE', path: 'UNIQUE_PATH' }, // copy and past this example below, uncomment, replace UNIQUE_PATH and TITLE
     ]);
     return resetPageMenuItems;
   }, []);
 
   return (
     <>
-      <section className={classes.section} id="story1">
-        <PageTitle>Story 1</PageTitle>
-        <Typography>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, esse. Odit magni explicabo doloremque
-          veritatis modi asperiores quam praesentium quae laboriosam, pariatur optio, ea mollitia officiis eaque
-          deserunt dolor sed.
-        </Typography>
-      </section>
+      <Section path="header" title="Developer Stories">
+        <Typography>See how teams in our community are implementing continuous previews.</Typography>
+      </Section>
 
-      <section className={classes.section} id="story2">
-        <PageTitle>Story 2</PageTitle>
-        <Typography>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, esse. Odit magni explicabo doloremque
-          veritatis modi asperiores quam praesentium quae laboriosam, pariatur optio, ea mollitia officiis eaque
-          deserunt dolor sed.
-        </Typography>
-      </section>
+      <Section path="how-to-add" title="Submit your story">
+        <Typography>Submisisons are welcome! Share your continuous previews story. </Typography>
+        <Link
+          className={classes.link}
+          href={externalLinks.uffizziGitHubManifesto}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Submit your story
+        </Link>
+      </Section>
 
-      <section className={classes.section} id="story3">
-        <PageTitle>Story 3</PageTitle>
-        <Typography>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, esse. Odit magni explicabo doloremque
-          veritatis modi asperiores quam praesentium quae laboriosam, pariatur optio, ea mollitia officiis eaque
-          deserunt dolor sed.
-        </Typography>
-      </section>
+      {/* <Section path="UNIQUE_PATH" title="TITLE">
+        copy and past this examaple below, replace UNIQUE_PATH , TITLE, add your content into the Section tag
+      </Section> */}
     </>
   );
 };
