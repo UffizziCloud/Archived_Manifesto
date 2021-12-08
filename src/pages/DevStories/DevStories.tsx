@@ -17,7 +17,7 @@ const DevStories: FC = () => {
     setPageMenuItems([
       { name: 'Developer Stories', path: 'header' },
       { name: 'Submit your story', path: 'how-to-add' },
-      { name: 'Story 1', path: 'story1' },
+      // { name: 'TITLE', path: 'UNIQUE_PATH' }, // copy and past this example below, uncomment, replace UNIQUE_PATH and TITLE
     ]);
     return resetPageMenuItems;
   }, []);
@@ -40,24 +40,9 @@ const DevStories: FC = () => {
         </Link>
       </Section>
 
-      <Section path="story1" title="Story 1">
-        <Typography>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, esse. Odit magni explicabo doloremque
-          veritatis modi asperiores quam praesentium quae laboriosam, pariatur optio, ea mollitia officiis eaque
-          deserunt dolor sed. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, esse. Odit magni
-          explicabo doloremque veritatis modi asperiores quam praesentium quae laboriosam, pariatur optio, ea mollitia
-          officiis eaque deserunt dolor sed.
-          <br />
-          <br />
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, esse. Odit magni explicabo doloremque
-          veritatis modi asperiores quam praesentium quae laboriosam, pariatur optio, ea mollitia officiis eaque
-          deserunt dolor sed.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, esse. Odit magni
-          explicabo doloremque veritatis modi asperiores quam praesentium quae laboriosam, pariatur optio, ea mollitia
-          officiis eaque deserunt dolor sed.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, esse.
-          Odit magni explicabo doloremque veritatis modi asperiores quam praesentium quae laboriosam, pariatur optio, ea
-          mollitia officiis eaque deserunt dolor sed.
-        </Typography>
-      </Section>
+      {/* <Section path="UNIQUE_PATH" title="TITLE">
+        copy and past this examaple below, replace UNIQUE_PATH , TITLE, add your content into the Section tag
+      </Section> */}
     </>
   );
 };
