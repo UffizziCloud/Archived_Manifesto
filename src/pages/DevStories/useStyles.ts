@@ -1,9 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
-  section: {
-    marginBottom: 50,
-  },
   link: {
     padding: '18px 50px',
     background: '#4B51D112',
